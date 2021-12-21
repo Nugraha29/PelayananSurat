@@ -39,7 +39,7 @@
               </div>
               <div class="row">
                 <div class="col-6">
-                  <h3 class="mb-0">{{ $countpelaporan }}</h3>
+                  <h3 class="mb-0">{{ $countreview }}</h3>
                 </div>
                 <div class="col-6 text-center text-success">
                   <i class="link-icon" data-feather="file" width="50" height="50"></i>

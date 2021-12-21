@@ -24,7 +24,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="/">
+                <a class="navbar-brand js-scroll-trigger" href="https://dlh.himagrib.co.id/">
                   <img src="assets/images/logo.png" width="5%"> Dinas Lingkungan Hidup
                 </a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -53,7 +53,7 @@
                         <p class="text-white-75 font-weight-light mb-0">Kabupaten Garut</p>
                         <p class="text-white-75 font-weight-light mb-0" style="font-size:15px">Jl. Terusan Pahlawan, Sukagalih, Kec. Tarogong Kidul, Kabupaten Garut</p>
                         <p class="text-white-75 font-weight-light mb-3" style="font-size:15px">Jawa Barat 44151</p>
-                        <a class="btn btn-primary btn-sm js-scroll-trigger" href="/"><i class="fa fa-arrow-left"></i> Kembali Ke Halaman Utama</a>
+                        <a class="btn btn-primary btn-sm js-scroll-trigger" href="https://dlh.himagrib.co.id/"><i class="fa fa-arrow-left"></i> Kembali Ke Halaman Utama</a>
 
                     </div>
                 </div>
