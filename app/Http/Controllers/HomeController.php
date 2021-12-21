@@ -54,8 +54,7 @@ class HomeController extends Controller
         
         } elseif (Gate::allows('isUser')) {
 
-            $countpelaporanair = Pelaporan::where('user_id', auth()->user()->id)
-                                ->where('jenis', 'Air')
+            $countpelaporanair = Pengaduan::where('jenis')
                                 ->count();
             $countpelaporanudara = Pelaporan::where('user_id', auth()->user()->id)
                                 ->where('jenis', 'Udara')
@@ -138,7 +137,6 @@ class HomeController extends Controller
             "rgba(255, 159, 64, 0.2)",
             "rgba(233,30,99, 0.2)",
             "rgba(205,220,57, 0.2)"
-
         ];
         $pelaporanairchart = new DashboardChart;
         $pelaporanairchart->minimalist(true);

@@ -39,8 +39,8 @@ Route::get('qrcode-with-image', function () {
 	$image = \QrCode::format('png')->merge('https://www.garutkab.go.id/assets/img/logo-kabupaten-garut.png', .3, true)->generate('asd');
  return response($image)->header('Content-type','image/png');
 });
-Route::get('pengaduan/create', ['as' => 'pengaduan.create', 'uses' => 'PengaduanController@create']);
-Route::post('pengaduan', ['as' => 'pengaduan.store', 'uses' => 'PengaduanController@store']);
+Route::get('pengajuan/create', ['as' => 'pengaduan.create', 'uses' => 'PengaduanController@create']);
+Route::post('pengajuan', ['as' => 'pengaduan.store', 'uses' => 'PengaduanController@store']);
 Route::get('/refresh_captcha', 'Auth\RegisterController@refreshCaptcha')->name('refresh');
 Auth::routes();
 
@@ -81,11 +81,11 @@ Route::middleware(['auth'])->group( function () {
 
 Route::middleware(['auth', 'admin'])->group( function () {
 	//Pengaduan
-	Route::resource('pengaduan', 'PengaduanController',  ['except' => ['create', 'store', 'show', 'destroy']]);
+	Route::resource('pengajuan', 'PengaduanController',  ['except' => ['create', 'store', 'show', 'destroy']]);
 	Route::get('pengaduan/json','PengaduanController@json');
 	Route::get('/pengaduan-chart-ajax', 'HomeController@pengaduanchartAjax');
 	Route::get('pengaduan/export', ['as' => 'pengaduan.export', 'uses' => 'PengaduanController@export']);
-	Route::get('pengaduan/{id}', ['as'     => 'pengaduan.show', 'uses' => 'PengaduanController@show']);	
+	Route::get('pengajuan/{id}', ['as'     => 'pengaduan.show', 'uses' => 'PengaduanController@show']);	
 	Route::get('pengaduan/destroy/{id}', 'PengaduanController@destroy');
 });
 

@@ -14,7 +14,7 @@
           </div>
           <div class="col-md-10 pl-md-0">
             <div class="auth-form-wrapper px-4 pt-5 pb-3">
-              <a href="#" class="noble-ui-logo d-block mb-2">Dinas Lingkungan Hidup <span>1.0</span></a>
+              <a href="#" class="noble-ui-logo d-block mb-2">Desa Mekarwangi</span></a>
               <h5 class="text-muted font-weight-normal mb-4">Selamat datang! Masuk ke akun Anda.</h5>
               <form class="forms-sample" method="POST" action="{{ route('login') }}">
                 @csrf
@@ -41,11 +41,11 @@
                   <button type="submit" class="btn btn-primary mr-2 mb-3 mb-md-3">Masuk</button>
                 </div>
                 <div class="mt-3">
-                 Bukan pengguna?<a href="{{ url('/register') }}"> Daftar</a> 
+                 Belum terdaftar?<a href="{{ url('/register') }}"> Daftar</a> 
                 </div>   
                 <div>
-                  Lupa Kata sandi?<a href="{{ url('/password/reset') }}"> Reset Kata sandi</a> 
-                 </div>                 
+                  <a href="{{ url('/password/reset') }}"></a> 
+                 </div> 
               </form>
             </div>
 

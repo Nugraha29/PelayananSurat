@@ -45,7 +45,7 @@ class NotifyPengaduan extends Notification
     {
         return [
             'pengaduan' => $this->pengaduan,
-            'jenis' => 'Pengaduan'
+            'jenis' => 'Pengajuan'
         ];
     }
 

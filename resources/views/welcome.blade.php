@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>SISTEM INFORMASI PELAPORAN DAN PENGADUAN DINAS LINGKUNGAN HIDUP</title>
+        <title>Pelayanan Surat Desa Mekarwangi</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="assets/images/logo-garut.png" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -24,37 +24,37 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="https://dlh.himagrib.co.id/">
-                  <img src="assets/images/logo.png" width="5%"> Dinas Lingkungan Hidup
+                <a class="navbar-brand js-scroll-trigger" href="">
+                  <img src="assets/video/input-onlinepngtools (1).png" width="5%"> Desa Mekarwangi
                 </a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger text-primary" href="{{ url ('/login') }}">Pelaporan</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger text-primary" href="{{ url ('/pengaduan/create') }}">Pengaduan</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger text-primary" href="{{ url ('/login') }}"></a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger text-primary" href="{{ url ('/pengaduan/create') }}"></a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Masthead-->
         <header>
-            <div class="overlay"></div>
-            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-              <source src="assets/video/bg-720.mp4" type="video/mp4">
-            </video>
-            <div class="container h-100">
+    
+        <img src="assets/video/Hidup-Minimalis.png" style="position:absolute;">
+            <div class="container h-100" style="position:relative;">
                 <div class="row h-100 align-items-center justify-content-center text-center">
                     <div class="col-lg-10 align-self-end">
-                        <h1 class="text-uppercase text-success font-weight-bold">Sistem Informasi Pelaporan dan Pengaduan</h1>
+                        <h1 class="text-uppercase text-success font-weight-bold">Pelayanan Surat Desa </h1>
                         <hr class="divider my-4" />
+                        <a class="nav-link js-scroll-trigger text-primary" href="{{ url ('/login') }}">Login</a>
+                        
                     </div>
                     <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 font-weight-light mb-0" style="font-size:25px">Dinas Lingkungan Hidup</p>
-                        <p class="text-white-75 font-weight-light mb-0">Kabupaten Garut</p>
-                        <p class="text-white-75 font-weight-light mb-0" style="font-size:15px">Jl. Terusan Pahlawan, Sukagalih, Kec. Tarogong Kidul, Kabupaten Garut</p>
-                        <p class="text-white-75 font-weight-light mb-3" style="font-size:15px">Jawa Barat 44151</p>
-                        <a class="btn btn-primary btn-sm js-scroll-trigger" href="https://dlh.himagrib.co.id/"><i class="fa fa-arrow-left"></i> Kembali Ke Halaman Utama</a>
-
+                        <p class="text-white-75 font-weight-light mb-0" style="font-size:25px"></p>
+                        <p class="text-white-75 font-weight-light mb-0"></p>
+                        <p class="text-white-75 font-weight-light mb-0" style="font-size:15px"></p>
+                        <p class="text-white-75 font-weight-light mb-3" style="font-size:15px"></p>
+                        
+                        
                     </div>
                 </div>
             </div>

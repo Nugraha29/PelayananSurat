@@ -6,58 +6,11 @@
 @endpush
 
 @section('content')  
-  <div class="row">
-    <div class="col-12 col-xl-12">
-      <div class="row flex-grow">
         <div class="col-md-4 grid-margin stretch-card">
           <div class="card">
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-baseline">
-                <h6 class="card-title mb-3">Pelaporan Baru</h6>
-              </div>
-              <div class="row">
-                <div class="col-6">
-                  <h3 class="mb-0">{{ $countpelaporan }}</h3>
-                </div>
-                <div class="col-6 text-center text-primary">
-                  <i class="link-icon" data-feather="file" width="50" height="50"></i>
-                </div>
-              </div>
-            </div>
-            <div class="card-footer">
-              <div class="stats">
-                <a href="{{ route('pelaporan.index')}}">Lihat Detail</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 grid-margin stretch-card">
-          <div class="card">
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-baseline">
-                <h6 class="card-title mb-3">Pelaporan Selesai</h6>
-              </div>
-              <div class="row">
-                <div class="col-6">
-                  <h3 class="mb-0">{{ $countreview }}</h3>
-                </div>
-                <div class="col-6 text-center text-success">
-                  <i class="link-icon" data-feather="file" width="50" height="50"></i>
-                </div>
-              </div>
-            </div>
-            <div class="card-footer">
-              <div class="stats">
-                <a href="{{ route('pelaporan.index')}}">Lihat Detail</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 grid-margin stretch-card">
-          <div class="card">
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-baseline">
-                <h6 class="card-title mb-3">Pengaduan Baru</h6>
+                <h6 class="card-title mb-3">Pengajuan Baru</h6>
               </div>
               <div class="row">
                 <div class="col-6">
@@ -70,147 +23,23 @@
             </div>
             <div class="card-footer">
               <div class="stats">
-                <a href="{{ route('pengaduan.index')}}">Lihat Detail</a>
+                <a href="{{ route('pengajuan.index')}}">Lihat Detail</a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div> <!-- row -->
-  
-  <div class="row">
-    <div class="col-6 grid-margin">
-      <div class="card overflow-hidden">
-        <div class="card-body">
-          <div class="d-flex justify-content-between align-items-baseline mb-4 mb-md-3">
-            <h6 class="card-title mb-0">Grafik Pelaporan Air</h6>
-          </div>
-          <div class="row align-items-start mb-2">
-            <div class="col-md-12">
-              <div class="form-group">
-                <select class="pelaporan form-control text-dark" data-style="btn btn-link" name="pelaporanyear" id="pelaporanair">
-                  <option disabled selected>Pilih Tahun</option>   
-                    <option value="2025">2025</option>
-                    <option value="2024">2024</option>
-                    <option value="2023">2023</option>
-                    <option value="2022">2022</option>
-                    <option value="2021">2021</option>
-                    <option value="2020">2020</option>
-                    <option value="2019">2019</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="flot-wrapper mx-auto" style="width: 300px;height: 300px;">
-            {!! $pelaporanairchart->container() !!}
-            {!! $pelaporanairchart->script() !!}      
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-6 col-xl-6 grid-margin">
-      <div class="card overflow-hidden">
-        <div class="card-body">
-          <div class="d-flex justify-content-between align-items-baseline mb-4 mb-md-3">
-            <h6 class="card-title mb-0">Grafik Pelaporan Udara</h6>
-          </div>
-          <div class="row align-items-start mb-2">
-            <div class="col-md-12">
-              <div class="form-group">
-                <select class="pelaporan form-control text-dark" data-style="btn btn-link" name="pelaporanyear" id="pelaporanudara">
-                  <option disabled selected>Pilih Tahun</option>   
-                    <option value="2025">2025</option>
-                    <option value="2024">2024</option>
-                    <option value="2023">2023</option>
-                    <option value="2022">2022</option>
-                    <option value="2021">2021</option>
-                    <option value="2020">2020</option>
-                    <option value="2019">2019</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="flot-wrapper mx-auto" style="width: 300px;height: 300px;">
-            {!! $pelaporanudarachart->container() !!}
-            {!! $pelaporanudarachart->script() !!}      
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> <!-- row -->
-  
-  <div class="row">
-    <div class="col-6 grid-margin">
-      <div class="card overflow-hidden">
-        <div class="card-body">
-          <div class="d-flex justify-content-between align-items-baseline mb-4 mb-md-3">
-            <h6 class="card-title mb-0">Grafik Pelaporan Limbah B3</h6>
-          </div>
-          <div class="row align-items-start mb-2">
-            <div class="col-md-12">
-              <div class="form-group">
-                <select class="pelaporan form-control text-dark" data-style="btn btn-link" name="pelaporanyear" id="pelaporanlimbahb3">
-                  <option disabled selected>Pilih Tahun</option>   
-                    <option value="2025">2025</option>
-                    <option value="2024">2024</option>
-                    <option value="2023">2023</option>
-                    <option value="2022">2022</option>
-                    <option value="2021">2021</option>
-                    <option value="2020">2020</option>
-                    <option value="2019">2019</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="flot-wrapper mx-auto" style="width: 300px;height: 300px;">
-            {!! $pelaporanlimbahb3chart->container() !!}
-            {!! $pelaporanlimbahb3chart->script() !!}      
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-6 grid-margin">
-      <div class="card overflow-hidden">
-        <div class="card-body">
-          <div class="d-flex justify-content-between align-items-baseline mb-4 mb-md-3">
-            <h6 class="card-title mb-0">Grafik Pelaporan Lingkungan</h6>
-          </div>
-          <div class="row align-items-start mb-2">
-            <div class="col-md-12">
-              <div class="form-group">
-                <select class="pelaporan form-control text-dark" data-style="btn btn-link" name="pelaporanyear" id="pelaporanlingkungan">
-                  <option disabled selected>Pilih Tahun</option>   
-                    <option value="2025">2025</option>
-                    <option value="2024">2024</option>
-                    <option value="2023">2023</option>
-                    <option value="2022">2022</option>
-                    <option value="2021">2021</option>
-                    <option value="2020">2020</option>
-                    <option value="2019">2019</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="flot-wrapper mx-auto" style="width: 300px;height: 300px;">
-            {!! $pelaporanlingkunganchart->container() !!}
-            {!! $pelaporanlingkunganchart->script() !!}      
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> <!-- row -->
+ <!-- row -->
 
   <div class="row">
     <div class="col-12 col-xl-12 grid-margin stretch-card">
       <div class="card overflow-hidden">
         <div class="card-body">
           <div class="d-flex justify-content-between align-items-baseline mb-4 mb-md-3">
-            <h6 class="card-title mb-0">Grafik Pengaduan</h6>
+            <h6 class="card-title mb-0">Grafik Pengajuan</h6>
           </div>
           <div class="row align-items-start mb-2">
             <div class="col-md-7">
-              <p class="text-muted tx-13 mb-3 mb-md-0">Statistik jumlah pengaduan per-tahun.</p>
+              <p class="text-muted tx-13 mb-3 mb-md-0">Statistik jumlah pengajuan per-tahun.</p>
             </div>
             <div class="col-md-5 d-flex justify-content-md-end">
               <div class="form-group">
@@ -299,11 +128,11 @@
           <div class="card">
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-baseline">
-                <h6 class="card-title mb-3">Pelaporan Air</h6>
+                <h6 class="card-title mb-3">Pengajuan</h6>
               </div>
               <div class="row">
                 <div class="col-6">
-                  <h3 class="mb-0">{{ $countpelaporanair }}</h3>
+                  <h3 class="mb-0"></h3>
                 </div>
                 <div class="col-6 text-center text-primary">
                   <i class="link-icon" data-feather="file" width="50" height="50"></i>
@@ -312,77 +141,12 @@
             </div>
             <div class="card-footer">
               <div class="stats">
-                <a href="{{ route('pelaporan.index')}}">Lihat Detail</a>
+                <a href="{{ url('pengajuan/create') }}">Submit Pengajuan</a>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-3 grid-margin stretch-card">
-          <div class="card">
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-baseline">
-                <h6 class="card-title mb-3">Pelaporan Udara</h6>
-              </div>
-              <div class="row">
-                <div class="col-6">
-                  <h3 class="mb-0">{{ $countpelaporanudara }}</h3>
-                </div>
-                <div class="col-6 text-center text-success">
-                  <i class="link-icon" data-feather="file" width="50" height="50"></i>
-                </div>
-              </div>
-            </div>
-            <div class="card-footer">
-              <div class="stats">
-                <a href="{{ route('pelaporan.index')}}">Lihat Detail</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 grid-margin stretch-card">
-          <div class="card">
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-baseline">
-                <h6 class="card-title mb-3">Pelaporan Limbah B3</h6>
-              </div>
-              <div class="row">
-                <div class="col-6">
-                  <h3 class="mb-0">{{ $countpelaporanlimbah }}</h3>
-                </div>
-                <div class="col-6 text-center text-warning">
-                  <i class="link-icon" data-feather="file" width="50" height="50"></i>
-                </div>
-              </div>
-            </div>
-            <div class="card-footer">
-              <div class="stats">
-                <a href="{{ route('pelaporan.index')}}">Lihat Detail</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 grid-margin stretch-card">
-          <div class="card">
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-baseline">
-                <h6 class="card-title mb-3">Pelaporan Lingkungan</h6>
-              </div>
-              <div class="row">
-                <div class="col-6">
-                  <h3 class="mb-0">{{ $countpelaporanlingkungan }}</h3>
-                </div>
-                <div class="col-6 text-center text-danger">
-                  <i class="link-icon" data-feather="file" width="50" height="50"></i>
-                </div>
-              </div>
-            </div>
-            <div class="card-footer">
-              <div class="stats">
-                <a href="{{ route('pelaporan.index')}}">Lihat Detail</a>
-              </div>
-            </div>
-          </div>
-        </div>
+       
       </div>
     </div>
   </div> 

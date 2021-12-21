@@ -66,54 +66,8 @@
                       </div>
                     @endif
                   </div>
-                  <div class="form-group">
-                    <label for="nama_perusahaan">Nama Perusahaan</label>
-                    <input id="nama_perusahaan-profile" class="form-control" maxlength="30" name="nama_perusahaan" type="text" value="{{ auth()->user()->nama_perusahaan }}">
-                    @if ($errors->has('nama_perusahaan'))
-                      <div id="nama_perusahaan-error" class="error text-danger pt-1" for="nama_perusahaan" style="display: block;">
-                        <strong>{{ $errors->first('nama_perusahaan') }}</strong>
-                      </div>
-                    @endif
-                  </div>
-                  <div class="form-group">
-                    <label for="bidang_usaha">Bidang Usaha</label>
-                    <select class="form-control js-example-basic-single js-states" style="width: 100%" id="bidang_usaha" name="bidang_usaha" required>
-                      <option disabled selected>Pilih Bidang Usaha</option>   
-                      <optgroup label="Fasilitas Kesehatan">
-                        <option {{ auth()->user()->bidang_usaha == "Apotek" ? "selected" : ""}} value="Apotek">Apotek</option>
-                        <option {{ auth()->user()->bidang_usaha == "Toko Obat" ? "selected" : ""}} value="Toko Obat">Toko Obat</option>
-                        <option {{ auth()->user()->bidang_usaha == "Klinik" ? "selected" : ""}} value="Klinik">Klinik</option>
-                        <option {{ auth()->user()->bidang_usaha == "Puskesmas" ? "selected" : ""}} value="Puskesmas">Puskesmas</option>
-                        <option {{ auth()->user()->bidang_usaha == "Rumah Sakit" ? "selected" : ""}} value="Rumah Sakit">Rumah Sakit</option>
-                        <option {{ auth()->user()->bidang_usaha == "Lab Kesehatan" ? "selected" : ""}} value="Lab Kesehatan">Lab Kesehatan</option>
-                      </optgroup>
-                      <optgroup label="Pertambangan Energi dan Mineral">
-                        <option {{ auth()->user()->bidang_usaha == "Pertambangan" ? "selected" : ""}} value="Pertambangan">Pertambangan</option>
-                        <option {{ auth()->user()->bidang_usaha == "Energi" ? "selected" : ""}} value="Energi">Energi</option>
-                        <option {{ auth()->user()->bidang_usaha == "Mineral" ? "selected" : ""}} value="Mineral">Mineral</option>
-                        <option {{ auth()->user()->bidang_usaha == "Panas Bumi" ? "selected" : ""}} value="Panas Bumi">Panas Bumi</option>
-                      </optgroup>                       
-                      <optgroup label="Industri">
-                        <option {{ auth()->user()->bidang_usaha == "Makanan Olahan" ? "selected" : ""}} value="Makanan Olahan">Makanan Olahan</option>
-                        <option {{ auth()->user()->bidang_usaha == "Bahan Baku" ? "selected" : ""}} value="Bahan Baku">Bahan Baku</option>
-                        <option {{ auth()->user()->bidang_usaha == "Perikanan" ? "selected" : ""}} value="Perikanan">Perikanan</option>
-                        <option {{ auth()->user()->bidang_usaha == "Pertanian" ? "selected" : ""}} value="Pertanian">Pertanian</option>
-                        <option {{ auth()->user()->bidang_usaha == "Perkebunan" ? "selected" : ""}} value="Perkebunan">Perkebunan</option>
-                        <option {{ auth()->user()->bidang_usaha == "Peternakan" ? "selected" : ""}} value="Peternakan">Peternakan</option>
-                      </optgroup>
-                      <optgroup label="Sektor Domestik">
-                        <option {{ auth()->user()->bidang_usaha == "Perumahan" ? "selected" : ""}} value="Perumahan">Perumahan</option>
-                        <option {{ auth()->user()->bidang_usaha == "Rumah Makan" ? "selected" : ""}} value="Rumah Makan">Rumah Makan</option>
-                        <option {{ auth()->user()->bidang_usaha == "Hotel" ? "selected" : ""}} value="Hotel">Hotel</option>
-                      </optgroup>
-                      <option {{ auth()->user()->bidang_usaha == "Lainnya" ? "selected" : ""}} value="Lainnya">Lainnya</option>
-                    </select>
-                    @if ($errors->has('bidang_usaha'))
-                      <div id="bidang_usaha-error" class="error text-danger pt-1" for="bidang_usaha" style="display: block;">
-                        <strong>{{ $errors->first('bidang_usaha') }}</strong>
-                      </div>
-                    @endif
-                  </div>
+
+                  
                   <div class="form-group">
                     <label for="alamat">Alamat</label>
                     <textarea name="alamat" maxlength="100" class="form-control" id="alamat-profile" rows="8">{{ auth()->user()->alamat }}</textarea>

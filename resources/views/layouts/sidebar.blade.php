@@ -1,7 +1,7 @@
 <nav class="sidebar">
   <div class="sidebar-header">
     <a href="#" class="sidebar-brand">
-      Dinas Lingkungan Hidup
+      Desa Mekarwangi
     </a>
     <div class="sidebar-toggler not-active">
       <span></span>
@@ -19,29 +19,11 @@
           <span class="link-title">Dashboard</span>
         </a>
       </li>
-      <li class="nav-item nav-category">Pelaporan</li>
-      <li class="nav-item {{ active_class(['pelaporan', 'tanggapan']) }}">
-        <a class="nav-link" data-toggle="collapse" href="#pelaporan" role="button" aria-expanded="{{ is_active_route(['pelaporan/*']) }}" aria-controls="pelaporan">
-          <i class="link-icon" data-feather="book"></i>
-          <span class="link-title">Pelaporan</span>
-          <i class="link-arrow" data-feather="chevron-down"></i>
-        </a>
-        <div class="collapse {{ show_class(['pelaporan/*']) }}" id="pelaporan">
-          <ul class="nav sub-menu">
-            <li class="nav-item">
-              <a href="{{ url('/pelaporan') }}" class="nav-link {{ active_class(['pelaporan']) }}">Tanggapi Pelaporan</a>
-            </li>
-            <li class="nav-item">
-              <a href="{{ url('/tanggapan') }}" class="nav-link {{ active_class(['tanggapan']) }}">Riwayat Pelaporan</a>
-            </li>
-          </ul>
-        </div>
-      </li>
-      <li class="nav-item nav-category">Pengaduan</li>
+      <li class="nav-item nav-category">Pengajuan</li>
       <li class="nav-item {{ active_class(['pengaduan']) }}">
-        <a href="{{ url('/pengaduan') }}" class="nav-link">
+        <a href="{{ url('/pengajuan') }}" class="nav-link">
           <i class="link-icon" data-feather="file-text"></i>
-          <span class="link-title">Pengaduan</span>
+          <span class="link-title">Pengajuan</span>
         </a>
       </li>
       @elsecan('isUser')
@@ -51,24 +33,6 @@
           <i class="link-icon" data-feather="box"></i>
           <span class="link-title">Dashboard</span>
         </a>
-      </li>
-      <li class="nav-item nav-category">Pelaporan</li>
-      <li class="nav-item {{ active_class(['pelaporan']) }}">
-        <a class="nav-link" data-toggle="collapse" href="#pelaporan" role="button" aria-expanded="{{ is_active_route(['pelaporan/*']) }}" aria-controls="pelaporan">
-          <i class="link-icon" data-feather="book"></i>
-          <span class="link-title">Pelaporan</span>
-          <i class="link-arrow" data-feather="chevron-down"></i>
-        </a>
-        <div class="collapse {{ show_class(['pelaporan/*']) }}" id="pelaporan">
-          <ul class="nav sub-menu">
-            <li class="nav-item">
-              <a href="{{ url('/pelaporan/form') }}" class="nav-link {{ active_class(['pelaporan/form']) }}">Form Pengajuan Pelaporan</a>
-            </li>
-            <li class="nav-item">
-              <a href="{{ url('/pelaporan') }}" class="nav-link {{ active_class(['pelaporan']) }}">Arsip Pelaporan</a>
-            </li>
-          </ul>
-        </div>
       </li>
       @elsecan ('isOperator')
       <li class="nav-item nav-category">Main</li>

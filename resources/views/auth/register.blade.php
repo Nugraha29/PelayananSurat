@@ -28,7 +28,7 @@
               <a class="btn btn-danger btn-icon-text" href="{{ url('/login') }}"><i class="btn-icon-append" data-feather="chevron-left"></i>Kembali</a> 
             </div> 
             <div class="auth-form-wrapper px-4 py-5">
-              <a href="#" class="noble-ui-logo d-block mb-2">Dinas Lingkungan Hidup <span>1.0</span></a>
+              <a href="#" class="noble-ui-logo d-block mb-2">Desa Mekarwangi <span></span></a>
               <h5 class="text-muted font-weight-normal mb-4">Buat akun baru.</h5>
               <form class="forms-sample" id="signupForm" method="POST" action="{{ route('register') }}">
                 @csrf
@@ -43,8 +43,8 @@
                     @endif
                   </div>
                   <div class="form-group">
-                    <label for="nama_perusahaan">Nama Perusahaan</label>
-                    <input id="nama-perusahaan-register" class="form-control" maxlength="50" name="nama_perusahaan" type="text" value="{{ old('nama_perusahaan') }}" placeholder="Nama Perusahaan">
+                    <label for="nama_perusahaan">Nomor Hp</label>
+                    <input id="nama-perusahaan-register" class="form-control" maxlength="50" name="nama_perusahaan" type="text" value="{{ old('nama_perusahaan') }}" placeholder="No handphone">
                     @if ($errors->has('nama_perusahaan'))
                       <div id="nama_perusahaan-error" class="error text-danger pl-3" for="nama_perusahaan" style="display: block;">
                         <strong>{{ $errors->first('nama_perusahaan') }}</strong>

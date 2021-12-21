@@ -15,12 +15,12 @@
                 <th>ID</th>
                 <th>Tanggal Pendaftaran</th>
                 <th>Nama</th>
-                <th>Nama Perusahaan</th>
+                <th>Nomor</th>
                 <th>Email</th>
-                <th>Telepon</th>
+                <!-- <th>Telepon</th>
                 <th>Bidang Usaha</th>
                 <th>Alamat</th>
-                <th>Jabatan</th>
+                <th>Jabatan</th> -->
                 <th>Status</th>
                 <th>Aksi</th>
               </tr>

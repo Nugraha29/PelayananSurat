@@ -19,7 +19,7 @@ class PengaduanController extends Controller
         $pengaduan = Pengaduan::all();
         return Datatables::of($pengaduan)
         ->addColumn('action', function($data){
-            $button = '&nbsp;&nbsp;&nbsp;<a class="btn btn-info btn-icon p-2 text-white" href="/pengaduan/'.$data->id.'" title="Lihat Detail"><svg xmlns="http://www.w3.org/2000/svg" style="height:15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info link-icon"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></a>';
+            $button = '&nbsp;&nbsp;&nbsp;<a class="btn btn-info btn-icon p-2 text-white" href="/pengajuan/'.$data->id.'" title="Lihat Detail"><svg xmlns="http://www.w3.org/2000/svg" style="height:15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info link-icon"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></a>';
             $button .= '&nbsp;&nbsp;&nbsp;<a type="button" name="delete" id="'.$data->id.'" class="delete btn btn-danger btn-icon p-2 text-white" title="Hapus"><svg xmlns="http://www.w3.org/2000/svg" style="height:15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></a>';
             return $button;
         })
@@ -38,7 +38,7 @@ class PengaduanController extends Controller
     {
         //
         $pengaduan = Pengaduan::paginate(10);
-        return view('pengaduan.index', ['pengaduan' => $pengaduan]);
+        return view('pengajuan.index', ['pengaduan' => $pengaduan]);
 
     }
 
@@ -55,7 +55,7 @@ class PengaduanController extends Controller
     public function create()
     {
         //
-        return view('pengaduan.guest');
+        return view('pengajuan.guest');
     }
 
     /**
@@ -72,25 +72,12 @@ class PengaduanController extends Controller
                 'nama' => 'required|min:3',
                 'telp' => 'required|min:6',
                 'email' => 'required|min:3',
-                'lat'=>'required|min:3',
-                'lng'=>'required|min:3',
                 'jenis'=>'required|min:3',
-                'deskripsi' => 'required|min:3',
-                'img1' => 'required|mimes:jpg,jpeg,png',
-                'img2' => 'mimes:jpg,jpeg,png',
-                'img3' => 'mimes:jpg,jpeg,png',
-                'img4' => 'required|mimes:jpg,jpeg,png',
-                'g-recaptcha-response' => 'required|captcha'
+
+                
             ],
             [
-                'img1.mimes' => 'Inputan Bukti Foto harus berupa file bertipe: jpg, jpeg, png.',    
-                'img2.mimes' => 'Inputan Bukti Foto harus berupa file bertipe: jpg, jpeg, png.',    
-                'img3.mimes' => 'Inputan Bukti Foto harus berupa file bertipe: jpg, jpeg, png.',                      
-                'img4.mimes' => 'Inputan Foto KTP harus berupa file bertipe: jpg, jpeg, png.',  
-                'img1.required' => 'Inputan Bukti Foto wajib diisi.',                      
-                'img4.required' => 'Inputan Bukti Foto wajib diisi.',                   
-                'g-recaptcha-response.required' => 'Please verify that you are not a robot.',                  
-                'g-recaptcha-response.captcha' => 'Captcha error! try again later or contact site admin.',                     
+
             ]
 
         );
@@ -104,18 +91,23 @@ class PengaduanController extends Controller
         $model->long = $request->get('lng');
         $model->jenis = $request->get('jenis');
         $model->deskripsi = $request->get('deskripsi');
-        $model->img1 = $request->file('img1')->store('FotoPengaduan', 'public');
+        
+       
+        if ($request->file('img1'))
+        {
+            $model->img1 = $request->file('img1')->store('img1', 'public', 'storage');
+        }
         if ($request->file('img2'))
         {
-            $model->img2 = $request->file('img2')->store('FotoPengaduan', 'public');
+            $model->img2 = $request->file('img2')->store('img2', 'public', 'storage');
         }
         if ($request->file('img3'))
         {
-            $model->img3 = $request->file('img3')->store('FotoPengaduan', 'public');
+            $model->img3 = $request->file('img3')->store('img3', 'public', 'storage');
         }
         if ($request->file('img4'))
         {
-            $model->img4 = $request->file('img4')->store('FotoKTP', 'public');
+            $model->img4 = $request->file('img4')->store('FotoKTP', 'public', 'storage');
         }
 
         $model->save();
@@ -139,7 +131,7 @@ class PengaduanController extends Controller
     {
         //
         $pengaduan = Pengaduan::findOrFail($id);
-        return view('pengaduan.show', ['pengaduan' => $pengaduan]);
+        return view('pengajuan.show', ['pengaduan' => $pengaduan]);
 
     }
 
